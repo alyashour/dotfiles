@@ -46,7 +46,7 @@ for source_file in "${!SYMLINKS[@]}"; do
 			# Backup existing symlink
 			print_warning "Existing file or symlink found at '$destination_symlink'. Backing up..."
 			mv "$destination_symlink" "${destination_symlink}.bak" || print_warning "Failed to backup existing file. Skipping symlink for '$source_file'."
-			ln -s "./$source_file" "$destination_symlink" && print_sucess "Symlinked '$source_file' to '$destination_symlink'." || print_error "Failed to create symlink for '$source_file'."
+			ln -s "./$source_file" "$destination_symlink" && print_success "Symlinked '$source_file' to '$destination_symlink'." || print_error "Failed to create symlink for '$source_file'."
 		fi
 	else
 		ln -s "./$source_file" "$destination_symlink" && print_success "Symlinked '$source_file' to '$destination_symlink'." || print_error "Failed to create symlink for '$source_file'."
