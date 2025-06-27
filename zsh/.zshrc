@@ -1,15 +1,15 @@
 # Core Zsh settings (always at the top)
-autoload -Uz compinit
-compinit
-setopt auto_cd
-setopt extended_glob
-setopt inc_append_history
-setopt share_history
-HISTSIZE=10000
-SAVEHIST=10000
+#autoload -Uz compinit
+#compinit
+#setopt auto_cd
+#setopt extended_glob
+#setopt inc_append_history
+#setopt share_history
+#HISTSIZE=10000
+#SAVEHIST=10000
 
 # Enable prompt substitution so command substitutions and function calls work in PS1
-setopt PROMPT_SUBST
+#setopt PROMPT_SUBST
 
 # Determine OS
 case "$(uname -s)" in

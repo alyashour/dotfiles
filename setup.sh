@@ -1,4 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+# Check Bash Version
+if [[ -z "${BASH_VERSINFO[0]}" || "${BASH_VERSINFO[0]}" -lt 4 ]]; then
+	# Print error message
+	echo -e "Error: This script requires Bash version 4.0 or newer." >&2
+	echo -e "	You are currently running Bash ${BASH_VERSION%%.*}." >&2
+	echo -e "	Please update Bash (using pacman, brew, apt, or dnf)." >&2
+	exit 1
+fi	
 
 # Symlinks
 declare -A SYMLINKS=(
