@@ -80,9 +80,7 @@ _exit_status_indicator() {
 #   %b : Resets bold (added for safety, but %{%f%b%} includes it)
 #   %k : Resets all formatting (colors, bold, etc.)
 
-PROMPT='
-%{$(_exit_status_indicator)%}%{%F{cyan}%}%n@%m%{%f%}:%{%F{blue}%}%~%{%f%}$(_git_prompt_info)%{%k%}
-%{$ZSH_PROMPT_COLOR_GREY%}λ %{$ZSH_PROMPT_COLOR_NORMAL%} '
+PROMPT='%{$(_exit_status_indicator)%}%{%F{cyan}%}%n@%m%{%f%}:%{%F{blue}%}%~%{%f%} $(_git_prompt_info)%{%k%}%{$ZSH_PROMPT_COLOR_GREY%}λ %{$ZSH_PROMPT_COLOR_NORMAL%} '
 
 # Time (RPROMPT)
 RPROMPT='%{%F{green}%}%@%{%f%}' # Displays current time in green on the right (12-hour format with AM/PM)
