@@ -33,6 +33,12 @@ if ! command -v git &> /dev/null; then
 	print_error "Git is not installed. Please install git before running this script"
 fi
 
+# Check if zsh is installed
+echo "Ensuring zsh is installed..."
+if ! command -v zsh &> /dev/null; then
+	print_error "Zsh is not installed. Please install zsh before running this script"
+fi
+
 # Create symlinks
 echo "Creating symlinks"
 for source_path in "${!SYMLINKS[@]}"; do
