@@ -1,0 +1,4 @@
+# VCPKG
+VCPKG_ROOT="$HOME/vcpkg"
+PATH="$VCPKG_ROOT:$PATH"
+
