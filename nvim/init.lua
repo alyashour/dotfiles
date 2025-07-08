@@ -1,3 +1,9 @@
+local config_root = vim.fn.fnamemodify(vim.fn.resolve(vim.fn.stdpath("config")), ":p")
+
+-- IMPORTANT: Adjust Lua's package.path to include your config's root and subdirectories.
+-- This tells Lua where to look for 'core.settings', 'plugins.lsp', etc.
+package.path = package.path .. ";" .. config_root .. "/?.lua;" .. config_root .. "/?/init.lua"
+
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
