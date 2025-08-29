@@ -1,2 +1,3 @@
 alias vi=nvim
 alias vim=nvim
+EDITOR=nvim
