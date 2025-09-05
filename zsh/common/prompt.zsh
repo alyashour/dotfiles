@@ -77,5 +77,5 @@ PROMPT='
 %{$ZSH_PROMPT_COLOR_GREY%}λ %{$ZSH_PROMPT_COLOR_NORMAL%} '
 
 # Time (RPROMPT)
-RPROMPT='%{%F{green}%}%@%{%f%}' # Displays current time in green on the right (12-hour format with AM/PM)
+# RPROMPT='%{%F{green}%}%@%{%f%}' # Displays current time in green on the right (12-hour format with AM/PM)
 
