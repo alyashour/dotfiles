@@ -36,3 +36,10 @@ if [[ -n "$OS_TYPE" && -d "$HOME/.config/zsh/$OS_TYPE" ]]; then
         fi
     done
 fi
+
+if (( $+commands[starship] )); then
+  eval "$(starship init zsh)"
+else
+  echo "DOTFILES WARN | Starship not installed"
+fi
+
