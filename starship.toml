@@ -1,0 +1,8 @@
+format="""
+$battery\
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$character"""
