@@ -13,8 +13,8 @@ fi
 declare -A SYMLINKS=(
   "zsh/.zshrc"		"$HOME/.zshrc"                  # Main .zshrc symlink
   "zsh"			"$HOME/.config/zsh"             # Symlink the entire zsh config directory
-  "nvim"			"$HOME/.config/nvim"            # Neovim config
-  "starship.toml"         "$HOME/.config/starship.toml"   # Starship config
+  "nvim"	        "$HOME/.config/nvim"            # Neovim config
+  "starship.toml"       "$HOME/.config/starship.toml"   # Starship config
 )
 
 # Helper funcs
