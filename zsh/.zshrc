@@ -43,3 +43,9 @@ else
   echo "DOTFILES WARN | Starship not installed"
 fi
 
+# Source local config files (not tracked by git)
+if [ -d "${ZDOTDIR:-$HOME}/.zsh/local" ]; then
+    for local_file in "${ZDOTDIR:-$HOME}/.zsh/local"/*.zsh; do
+        [ -r "$local_file" ] && source "$local_file"
+    done
+fi

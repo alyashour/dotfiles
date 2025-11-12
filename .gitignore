@@ -1,2 +1,8 @@
+# MacOS
 .DS_Store
+
+# Any backups if present
 **/*.bak
+
+# Local configs
+.zsh/local/*
