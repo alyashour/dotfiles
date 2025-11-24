@@ -1,4 +1,5 @@
 format = """
+$python\
 $username\
 $hostname\
 $directory\
@@ -8,6 +9,10 @@ $git_status\
 $cmd_duration\
 $line_break\
 $character"""
+
+[python]
+format = '[(\($virtualenv\))]($style) '
+style = 'bright-green'
 
 [directory]
 read_only = " "
