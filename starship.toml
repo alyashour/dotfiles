@@ -14,9 +14,6 @@ $character"""
 format = '[(\($virtualenv\))]($style) '
 style = 'bright-green'
 
-[directory]
-read_only = " "
-
 [git_branch]
 format = "[$branch]($style)"
 style = "bright-black"

@@ -9,8 +9,9 @@ vim.opt.expandtab = true   -- use spaces instead of tabs
 vim.opt.smartindent = true -- absolutely goated
 
 -- UI
-vim.opt.cursorline = true  -- highlight the current line (idk if I'll keep this)
-vim.opt.wrap = false       -- me n my homies hate line wrap
+vim.opt.cursorline = true  -- highlight the current line
+vim.opt.wrap = false       -- don't do by default
+vim.opt.linebreak = true   -- always, always, always
 vim.opt.signcolumn = "yes" -- idk what this does tbh, gonna see
 vim.opt.termguicolors = true
 
