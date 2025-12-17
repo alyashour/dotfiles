@@ -1,3 +1,6 @@
+-- leader
+vim.g.mapleader = " "
+
 -- Line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -18,6 +21,9 @@ vim.opt.termguicolors = true
 -- Search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+-- LSP Diagnostics
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { silent = true })
 
 -- Format on save
 -- Shout out my barber
