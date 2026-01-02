@@ -4,7 +4,7 @@ local mlc = require("mason-lspconfig")
 -- Setup Mason
 mason.setup()
 mlc.setup({
-    ensure_installed = { "pyright", "rust_analyzer", "clangd", "lua_ls", "zls" }
+    ensure_installed = { "pyright", "rust_analyzer", "clangd", "lua_ls", "zls", "gopls" }
 })
 
 -- Shared on_attach function
@@ -25,6 +25,19 @@ local servers = {
     pyright = {},
     rust_analyzer = {},
     clangd = {},
+    gopls = {
+        settings = {
+            gopls = {
+                analyses = {
+                    unusedparams = true,
+                    nilness = true,
+                    shadow = true,
+                },
+                staticcheck = true,
+                gofumpt = true,
+            },
+        },
+    },
     lua_ls = {
         settings = {
             Lua = {
@@ -55,7 +68,7 @@ local servers = {
     },
 }
 
--- Configure and start LSP servers using the new API
+-- Configure and start LSP servers
 for server_name, server_config in pairs(servers) do
     -- Merge base config with server-specific config
     local config = vim.tbl_deep_extend("force", {

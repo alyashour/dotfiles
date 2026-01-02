@@ -1,6 +1,5 @@
-# VCPKG
-VCPKG_ROOT="$HOME/vcpkg"
-PATH="$VCPKG_ROOT:$PATH"
+# Go Path
+export PATH="$PATH:$HOME/go/bin"
 
 # ls color
 export CLICOLOR=1
